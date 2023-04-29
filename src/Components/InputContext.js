@@ -24,17 +24,16 @@ const handleSubmit = (event) => {
     event.preventDefault();
     setTodoList((prevState)=>[...prevState,{todo}])
 
-    console.log(todo.title)
-    console.log(todoList)
+
 }
 
 const handleDelete =(id)=>{
-    console.log(id)
-    const filtered = todoList.filter((todo)=>todo.todo.id !== id)
+    // const filtered = todoList.filter((todo)=>todo.todo.id !== id)
 
-    console.log(filtered)
-    setTodoList(filtered)
-
+    const filteredList = todoList.filter((item) => {
+        return item.todo.id !== id
+    })
+    setTodoList(filteredList)
 }
 
 

@@ -5,7 +5,7 @@ import { TodoProvider } from './TodoContext';
 
 const Body = () => {
     return (
-        <div className='bg-gray-600 w-1/2 text-center h-1/2'>
+        <div className='bg-gray-600 w-full min-h-screen text-center'>
             <InputProvider>
             <TodoProvider>
                 

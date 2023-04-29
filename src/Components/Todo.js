@@ -13,9 +13,11 @@ const Todo = ({todoList}) => {
       
      {todoList.map((todo) =>
      
-     <div className='bg-orange-400 m-2 p-3 flex justify-between align-middle text-center' key={todo.todo.id} >
+     <div className=' bg-transparent border-solid border-4 border-gray-500 rounded-md mt-10 drop-shadow-lg m-2 p-3 flex justify-between align-middle text-center' key={todo.todo.id} >
       {todo.todo.title}
-      <AiFillDelete className='text-red-900' onClick={()=> handleDelete(todo.todo.id)}></AiFillDelete>
+      <div className='bg-red-600 h-[40px] w-[40px] flex justify-center items-center cursor-pointer hover:scale-105 border hover:rounded-md'>
+      <AiFillDelete className='text-white text-2xl ' onClick={()=> handleDelete(todo.todo.id)}></AiFillDelete>
+      </div>
       </div>
 
      )}
